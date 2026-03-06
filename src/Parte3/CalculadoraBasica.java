@@ -1,0 +1,40 @@
+package Parte3;
+
+import java.util.Scanner;
+
+public class CalculadoraBasica {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("--- Menú de Operaciones ---");
+        System.out.println("1. Sumar");
+        System.out.println("2. Restar");
+        System.out.println("3. Multiplicar");
+        System.out.print("Elija una opción (1-3): ");
+        int opcion = scanner.nextInt();
+
+        System.out.print("Ingrese el primer número: ");
+        double num1 = scanner.nextDouble();
+        
+        System.out.print("Ingrese el segundo número: ");
+        double num2 = scanner.nextDouble();
+
+        // switch para decidir qué operación realizar
+        switch (opcion) {
+            case 1:
+                System.out.println("Resultado de la suma: " + (num1 + num2));
+                break;
+            case 2:
+                System.out.println("Resultado de la resta: " + (num1 - num2));
+                break;
+            case 3:
+                System.out.println("Resultado de la multiplicación: " + (num1 * num2));
+                break;
+            default:
+                System.out.println("Error: Opción no válida. Debe elegir entre 1 y 3.");
+                break;
+        }
+
+        scanner.close();
+    }
+}
